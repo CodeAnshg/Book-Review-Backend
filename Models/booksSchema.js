@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-// Define the book schema with reviews
 const bookSchema = new mongoose.Schema({
   number: Number,
   title: String,
@@ -9,8 +8,8 @@ const bookSchema = new mongoose.Schema({
   cover_image: String,
   reviews: [
     {
-      rating: { type: Number, required: true, min: 1, max: 5 }, // Rating between 1-5
-      review: { type: String, required: true } // Review comment
+      rating: { type: Number, required: true, min: 1, max: 5 },
+      review: { type: String, required: true } 
     }
   ]
 });
